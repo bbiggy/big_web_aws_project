@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>stock app</title>
+  <style>
+    
+  </style>
+</head>
+<body>
+  <header>
+    <h1>รายการของใน stock</h1>
+  </header>
+  <main>
+    <ul class="notes-list">
+      {% for note in notes %}
+      <li class="note">
+        <a href="/note/{{ note._id }}">- {{ note.title }}</a>
+        <p>{{note.content}}</p>
+      </li>
+      <hr>
+      {% endfor %}
+    </ul>
+    <a href="/new" class="new-note-button">สั่งของเพิ่ม</a>
+  </main>
+</body>
+</html>

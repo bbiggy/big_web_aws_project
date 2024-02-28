@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="th">
+  <head>
+    <title>เเก้ใขสินค้า {{ note.title }}</title>
+    <style></style>
+  </head>
+  <body>
+    <h1>เเก้ใขสินค้า {{ note.title }}</h1>
+    <form method="POST">
+      <label for="title">ชื่อของ</label>
+      <input type="text" name="title" value="{{ note.title }}" required /><br />
+      <label for="content">จำนวน</label>
+      <input name="content" type="number" value="{{ note.content}}" max="{{ note.content}}" required>
+      <button type="submit">ตกลง</button>
+      <a href="/delete/{{ note._id }}">ลบ</a>
+    </form>
+    <button onclick="location.href='/';">กลับ</button>
+  </body>
+</html>
